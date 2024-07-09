@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="tests" thread-count="2" name="Leaftaps Leads" verbose="5">
+  <test thread-count="3" parallel="classes" name="Test1">
+    <classes>
+      <class name="week4.day2.EditLead"/>
+      <class name="week4.day2.CreateLead"/>
+      <class name="week4.day2.LeaftapsLogin"/>
+      
+    </classes>
+  </test> <!-- Test -->
+  <test thread-count="3"  name="Test2">
+    <classes>
+      
+      <class name="week4.day2.DuplicateLead"/>
+      <class name="week4.day2.DeleteLead"/>
+      <class name="week4.day2.LeaftapsLogin"/>
+      
+    </classes>
+  </test> <!-- Test -->
+  <test thread-count="3"  name="Test3">
+    <classes>
+      <class name="week4.day2.LeaftapsLogin"/>
+      <class name="week4.day2.MergeLead"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
