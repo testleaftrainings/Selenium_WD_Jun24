@@ -1,0 +1,16 @@
+Steps to execute as a groups in TestNG
+--------------------------------------
+    1. Use attribute as alwaysRun = true for all the annotations(@BeforeSuite, @BeforeTest, @BeforeClass, @BeforeMethod, @AfterMethod, @AfterSuite)
+    2. Use a attribute groups in test. By using groups attribute we can able to assign assign multiple group name for the testcase/AfterMethod. (Eg: groups{"smoke", "regression", "functional"} )
+    3. Create a xml file for Testcases , add a groups tag to incldue and exclude the group name, Below are the sample groups tag for xml.
+    <groups>
+        <run>
+            <include name="squad1"></include>
+            <include name="squad2"></include>
+            <include name="squad4"></include>
+            <exclude name="squad3"></exclude>
+        </run>
+    </groups>
+
+    4. It will execute the testcase which is having the groups as either "squad1" or "squad2" or "squad4" and also it will not execute groups name which is having as "squad3".
+    5. Note : groups will work only for the testcases mentioned in the xml file.
